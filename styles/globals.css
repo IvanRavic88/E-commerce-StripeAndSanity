@@ -96,17 +96,6 @@ span.text-red {
   font-weight: 600;
 }
 
-.feautered-card {
-  margin-top: 2rem;
-}
-
-.featured-icons {
-  padding: 1rem;
-  color: #2b3445;
-  width: 5rem;
-  height: 5rem;
-}
-
 .products-container {
   display: flex;
   flex-wrap: wrap;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, Box, Grid, Paper, Card, Item } from "@mui/material";
+import { Divider, Box, Grid } from "@mui/material";
 
 import Typography from "@mui/material/Typography";
 
@@ -7,33 +7,25 @@ import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined
 import SavingsOutlinedIcon from "@mui/icons-material/SavingsOutlined";
 import AlarmOnOutlinedIcon from "@mui/icons-material/AlarmAddOutlined";
 import PaymentsOutlinedIcon from "@mui/icons-material/PaymentOutlined";
+import styles from "../styles/Featured.module.css";
 
 const Featured = () => {
   return (
-    <Box m={15} sx={{ flexGrow: 1 }} className="feautered-card" elevation={1}>
-      <Grid
-        mt={15}
-        alignItems="center"
-        justify="center"
-        spacing={2}
-        container
-        className="featured-grid"
-      >
+    <Box m={15} sx={{ flexGrow: 1 }} className={styles.card} elevation={1}>
+      <Grid mt={15} alignItems="center" justify="center" spacing={2} container>
         <Grid align="center" item xs={12} md={3} lg={3}>
           <div>
-            <LocalShippingOutlinedIcon className="featured-icons" />
+            <LocalShippingOutlinedIcon className={styles.icons} />
           </div>
           <Divider />
           <div>
-            <Typography className="text" variant="subtitle1">
-              Fast delivery
-            </Typography>
+            <Typography variant="subtitle1">Fast delivery</Typography>
             <Typography variant="body2">Start from $20</Typography>
           </div>
         </Grid>
         <Grid align="center" item xs={12} md={3} lg={3}>
           <div>
-            <SavingsOutlinedIcon className="featured-icons" />
+            <SavingsOutlinedIcon className={styles.icons} />
           </div>
           <Divider />
           <div>
@@ -43,7 +35,7 @@ const Featured = () => {
         </Grid>
         <Grid align="center" item xs={12} md={3} lg={3}>
           <div>
-            <AlarmOnOutlinedIcon className="featured-icons" />
+            <AlarmOnOutlinedIcon className={styles.icons} />
           </div>
           <Divider />
           <div>
@@ -53,7 +45,7 @@ const Featured = () => {
         </Grid>
         <Grid align="center" item xs={12} md={3} lg={3}>
           <div>
-            <PaymentsOutlinedIcon className="featured-icons" />
+            <PaymentsOutlinedIcon className={styles.icons} />
           </div>
           <Divider />
           <div>
