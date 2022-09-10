@@ -74,4 +74,4 @@ const Featured = () => {
   );
 };
 
-export default withStyles(styles)(Featured);
+export default withStyles(style)(Featured);
