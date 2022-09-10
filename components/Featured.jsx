@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, Box, Grid, StyledEngineProvider } from "@mui/material";
+import { Divider, Box, Grid } from "@mui/material";
 
 import Typography from "@mui/material/Typography";
 
