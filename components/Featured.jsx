@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, Box, Grid } from "@mui/material";
+import { Divider, Box, Grid, withStyles } from "@mui/material";
 
 import Typography from "@mui/material/Typography";
 
@@ -74,4 +74,4 @@ const Featured = () => {
   );
 };
 
-export default Featured;
+export default withStyles(styles)(Featured);
