@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, Box, Grid, withStyles } from "@mui/material";
+import { Divider, Box, Grid } from "@mui/material";
 
 import Typography from "@mui/material/Typography";
 
@@ -7,30 +7,17 @@ import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined
 import SavingsOutlinedIcon from "@mui/icons-material/SavingsOutlined";
 import AlarmOnOutlinedIcon from "@mui/icons-material/AlarmAddOutlined";
 import PaymentsOutlinedIcon from "@mui/icons-material/PaymentOutlined";
-
-import { whithStyles } from "@mui/styles";
+import styles from "../styles/Featured.module.css";
 
 const Featured = () => {
-  const style = {
-    icons: {
-      padding: "1rem",
-      color: "#2b3445",
-      width: "5rem",
-      height: "5rem",
-    },
-    card: {
-      marginTop: "2rem",
-    },
-  };
-
   return (
-    <Box m={15} sx={{ flexGrow: 1 }} className={style.card} elevation={1}>
+    <Box m={15} sx={{ flexGrow: 1 }} className={styles.card} elevation={1}>
       <Grid mt={15} alignItems="center" justify="center" spacing={2} container>
         <Grid align="center" item xs={12} md={3} lg={3}>
           <div>
             <LocalShippingOutlinedIcon
-              className={style.icons}
-              fontSize="large"
+              className={styles.icons}
+              sx={{ width: 70, height: 70 }}
             />
           </div>
           <Divider />
@@ -41,7 +28,10 @@ const Featured = () => {
         </Grid>
         <Grid align="center" item xs={12} md={3} lg={3}>
           <div>
-            <SavingsOutlinedIcon className={style.icons} />
+            <SavingsOutlinedIcon
+              sx={{ width: 70, height: 70 }}
+              className={styles.icons}
+            />
           </div>
           <Divider />
           <div>
@@ -51,7 +41,10 @@ const Featured = () => {
         </Grid>
         <Grid align="center" item xs={12} md={3} lg={3}>
           <div>
-            <AlarmOnOutlinedIcon className={style.icons} />
+            <AlarmOnOutlinedIcon
+              sx={{ width: 70, height: 70 }}
+              className={styles.icons}
+            />
           </div>
           <Divider />
           <div>
@@ -61,7 +54,10 @@ const Featured = () => {
         </Grid>
         <Grid align="center" item xs={12} md={3} lg={3}>
           <div>
-            <PaymentsOutlinedIcon className={style.icons} />
+            <PaymentsOutlinedIcon
+              sx={{ width: 70, height: 70 }}
+              className={styles.icons}
+            />
           </div>
           <Divider />
           <div>
@@ -74,4 +70,4 @@ const Featured = () => {
   );
 };
 
-export default withStyles(style)(Featured);
+export default Featured;
