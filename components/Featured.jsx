@@ -7,18 +7,17 @@ import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined
 import SavingsOutlinedIcon from "@mui/icons-material/SavingsOutlined";
 import AlarmOnOutlinedIcon from "@mui/icons-material/AlarmAddOutlined";
 import PaymentsOutlinedIcon from "@mui/icons-material/PaymentOutlined";
-import styles from "../styles/Featured.module.css";
+
+import makeStyles from "./styles/Featured";
 
 const Featured = () => {
+  const styles = makeStyles();
   return (
-    <Box m={15} sx={{ flexGrow: 1 }} className={styles.card} elevation={1}>
+    <Box m={15} className={styles.card} elevation={1}>
       <Grid mt={15} alignItems="center" justify="center" spacing={2} container>
         <Grid align="center" item xs={12} md={3} lg={3}>
           <div>
-            <LocalShippingOutlinedIcon
-              className={styles.icons}
-              sx={{ width: 70, height: 70 }}
-            />
+            <LocalShippingOutlinedIcon className={styles.icons} />
           </div>
           <Divider />
           <div>
@@ -28,10 +27,7 @@ const Featured = () => {
         </Grid>
         <Grid align="center" item xs={12} md={3} lg={3}>
           <div>
-            <SavingsOutlinedIcon
-              sx={{ width: 70, height: 70 }}
-              className={styles.icons}
-            />
+            <SavingsOutlinedIcon className={styles.icons} />
           </div>
           <Divider />
           <div>
@@ -41,10 +37,7 @@ const Featured = () => {
         </Grid>
         <Grid align="center" item xs={12} md={3} lg={3}>
           <div>
-            <AlarmOnOutlinedIcon
-              sx={{ width: 70, height: 70 }}
-              className={styles.icons}
-            />
+            <AlarmOnOutlinedIcon className={styles.icons} />
           </div>
           <Divider />
           <div>
@@ -54,10 +47,7 @@ const Featured = () => {
         </Grid>
         <Grid align="center" item xs={12} md={3} lg={3}>
           <div>
-            <PaymentsOutlinedIcon
-              sx={{ width: 70, height: 70 }}
-              className={styles.icons}
-            />
+            <PaymentsOutlinedIcon className={styles.icons} />
           </div>
           <Divider />
           <div>
