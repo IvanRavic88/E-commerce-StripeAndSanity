@@ -2,14 +2,16 @@ import React from "react";
 import Link from "next/link";
 import { urlFor } from "../LIB/client";
 import { Card, CardMedia, Typography, Divider } from "@mui/material/";
+import makeStyles from "./styles/product";
 
 const Product = ({ product: { image, name, slug, price } }) => {
+  const styles = makeStyles();
   return (
     <div>
       <Link href={`/product/${slug.current}`}>
-        <Card className="product-card" elevation={9} raised>
+        <Card className={styles.productCard} elevation={9} raised>
           <CardMedia
-            className="product-card-image"
+            className={styles.productCardImage}
             component="img"
             image={urlFor(image && image[0])}
             alt="product"
@@ -17,7 +19,7 @@ const Product = ({ product: { image, name, slug, price } }) => {
           <Typography
             variant="h6"
             gutterBottom
-            className="product-padding-left"
+            className={styles.productPaddingLeft}
           >
             {name}
           </Typography>
@@ -26,7 +28,7 @@ const Product = ({ product: { image, name, slug, price } }) => {
             variant="h6"
             color={"black"}
             gutterBottom
-            className="product-padding-left"
+            className={styles.productPaddingLeft}
           >
             ${price}
           </Typography>

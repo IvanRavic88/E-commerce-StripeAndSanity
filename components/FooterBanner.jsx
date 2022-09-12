@@ -3,7 +3,8 @@ import Link from "next/link";
 import { Card } from "@mui/material";
 import { urlFor } from "../LIB/client";
 import Button from "@mui/material/Button";
-
+import makeStayles from "./styles/footer";
+import { Typography } from "@material-ui/core";
 const FooterBanner = ({
   footerBanner: {
     discount,
@@ -18,21 +19,26 @@ const FooterBanner = ({
     desc,
   },
 }) => {
+  const styles = makeStayles();
   return (
-    <Card raised className="footer-banner-container">
-      <div className="banner-desc">
-        <div className="left">
-          <p>{discount}</p>
-          <h3>{largeText1}</h3>
-          <h3>{largeText2}</h3>
-          <p>{saleTime}</p>
+    <Card raised className={styles.footerBannerContainer}>
+      <div className={styles.bannerDesc}>
+        <div className={styles.left}>
+          <Typography component="p" variant="body2">
+            {discount}
+          </Typography>
+          <Typography variant="h3">{largeText1}</Typography>
+          <Typography variant="h3">{largeText2}</Typography>
+          <Typography componen>{saleTime}</Typography>
         </div>
-        <div className="right">
-          <p>{smallText}</p>
-          <h3>{midText}</h3>
-          <p>{desc}</p>
+        <div className={styles.right}>
+          <Typography component="p">{smallText}</Typography>
+          <Typography variant="h3">{midText}</Typography>
+          <Typography component="p">{desc}</Typography>
           <Link href={`/product/${product}`}>
-            <Button variant="containded">{buttonText}</Button>
+            <Button collor="error" variant="containded">
+              {buttonText}
+            </Button>
           </Link>
         </div>
         {/* <img src={urlFor(image)} className="footer-banner-image"></img> */}
