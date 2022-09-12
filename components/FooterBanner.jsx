@@ -29,7 +29,7 @@ const FooterBanner = ({
           </Typography>
           <Typography variant="h3">{largeText1}</Typography>
           <Typography variant="h3">{largeText2}</Typography>
-          <Typography componen>{saleTime}</Typography>
+          <Typography component="p">{saleTime}</Typography>
         </div>
         <div className={styles.right}>
           <Typography component="p">{smallText}</Typography>

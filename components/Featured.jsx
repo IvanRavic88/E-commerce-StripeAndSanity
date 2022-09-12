@@ -8,7 +8,7 @@ import SavingsOutlinedIcon from "@mui/icons-material/SavingsOutlined";
 import AlarmOnOutlinedIcon from "@mui/icons-material/AlarmAddOutlined";
 import PaymentsOutlinedIcon from "@mui/icons-material/PaymentOutlined";
 
-import makeStyles from "./styles/featured";
+import makeStyles from "./styles/featured.js";
 
 const Featured = () => {
   const styles = makeStyles();

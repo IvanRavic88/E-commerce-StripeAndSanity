@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   future: { webpack: true },
-  reactStrictMode: true,
+  reactStrictMode: false,
   compiler: {
     styledComponents: true,
   },
