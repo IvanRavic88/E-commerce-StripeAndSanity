@@ -41,7 +41,6 @@ const FooterBanner = ({
             </Button>
           </Link>
         </div>
-        {/* <img src={urlFor(image)} className="footer-banner-image"></img> */}
       </div>
     </Card>
   );
