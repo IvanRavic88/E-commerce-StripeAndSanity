@@ -8,7 +8,7 @@ import {
 import { Product } from "../../components";
 import { useStateContext } from "../../context/StateContex";
 import { client, urlFor } from "../../LIB/client";
-
+import { Typography } from "@mui/material";
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
   const [index, setIndex] = useState(0);
