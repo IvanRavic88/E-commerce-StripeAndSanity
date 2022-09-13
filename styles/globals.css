@@ -707,11 +707,23 @@ span.text-red {
     gap: 1rem;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 365px) {
   .cart-container {
     max-width: 18rem;
   }
   .btn {
     margin-left: 0;
+  }
+  .product-detail-desc .buttons {
+    flex-direction: column;
+  }
+  .buttons .buy-now {
+    margin-top: 0px;
+  }
+  .quantity-desc {
+    padding: 0.2rem;
+  }
+  .quantity-desc span {
+    padding: 6px 5px;
   }
 }
