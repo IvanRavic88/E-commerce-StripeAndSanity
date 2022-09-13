@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { Card } from "@mui/material";
-import { urlFor } from "../LIB/client";
 import Button from "@mui/material/Button";
 import makeStayles from "./styles/footer";
 import { Typography } from "@material-ui/core";

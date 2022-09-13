@@ -17,13 +17,18 @@ export default makeStyles((theme) => ({
       marginBottom: "5rem",
     },
     [theme.breakpoints.down("xs")]: {
-      padding: "2rem",
-      height: "18rem",
+      padding: "1rem",
+      height: "20rem",
       marginTop: "8rem",
       marginBottom: "5rem",
     },
   },
   bannerDesc: {
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column",
+      gap: "1rem",
+    },
+
     "& h3": {
       fontWeight: "900",
       marginBottom: "0.5rem",

@@ -5,10 +5,11 @@ import {
   AiOutlineMinus,
   AiOutlinePlus,
   AiOutlineLeft,
-  AioutlineShopping,
   AiOutlineShopping,
 } from "react-icons/ai";
 import { TiDeleteOutline } from "react-icons/ti";
+
+import { Box, Card, Button, Typography } from "@mui/material";
 
 import toast from "react-hot-toast";
 import { useStateContext } from "../context/StateContex";
@@ -44,21 +45,21 @@ const Cart = () => {
   };
 
   return (
-    <div className="cart-wrapper" ref={cartRef}>
-      <div className="cart-container">
-        <button
-          type="button"
-          className="cart-heading"
-          onClick={() => setShowCart(false)}
-        >
+    <Box className="cart-wrapper" ref={cartRef}>
+      <Card className="cart-container">
+        <Button className="cart-heading" onClick={() => setShowCart(false)}>
           <AiOutlineLeft />
-          <span className="heading">Your Cart</span>
-          <span className="cart-num-items">({totalQuantities} items)</span>
-        </button>
+          <Typography component="p" className="heading">
+            Your Cart
+          </Typography>
+          <Typography component="p" className="cart-num-items">
+            ({totalQuantities} items)
+          </Typography>
+        </Button>
         {cartItems.length < 1 && (
           <div className="empty-cart">
             <AiOutlineShopping size={50} />
-            <h3>Your shopping bag is empty</h3>
+            <Typography component="h3">Your shopping bag is empty</Typography>
             <Link href="/">
               <button
                 type="button"
@@ -81,8 +82,8 @@ const Cart = () => {
                 ></img>
                 <div className="item-desc">
                   <div className="flex top">
-                    <h5>{item.name}</h5>
-                    <h4>{item.price}</h4>
+                    <Typography component="h5">{item.name}</Typography>
+                    <Typography component="h6">{item.price}</Typography>
                   </div>
                   <div className="flex bottom">
                     <div>
@@ -121,8 +122,8 @@ const Cart = () => {
         {cartItems.length >= 1 && (
           <div className="cart-bottom">
             <div className="total">
-              <h3>Subtotal:</h3>
-              <h3>${totalPrice}</h3>
+              <Typography component="h3">Subtotal:</Typography>
+              <Typography component="h3">${totalPrice}</Typography>
             </div>
             <div className="btn-container">
               <button type="button" className="btn" onClick={handleCheckout}>
@@ -131,8 +132,8 @@ const Cart = () => {
             </div>
           </div>
         )}
-      </div>
-    </div>
+      </Card>
+    </Box>
   );
 };
 

@@ -4,15 +4,7 @@ import { Card } from "@mui/material";
 import Button from "@mui/material/Button";
 
 const HeroBanner = ({
-  heroBanner: {
-    smallText,
-    midText,
-    largeText1,
-    image,
-    product,
-    buttonText,
-    desc,
-  },
+  heroBanner: { smallText, midText, largeText1, product, buttonText, desc },
 }) => {
   return (
     <Card elevation={4} className="hero-banner-container">

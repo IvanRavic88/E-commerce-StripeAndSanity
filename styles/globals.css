@@ -591,7 +591,6 @@ span.text-red {
   .hero-banner-container button {
     margin-top: 2rem;
     margin-bottom: 2rem;
-    z-index: 10000;
   }
   .desc {
     bottom: 60px;
@@ -680,5 +679,17 @@ span.text-red {
     margin: auto;
   }
 }
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 420px) {
+  .cart-container {
+    max-width: 20rem;
+  }
+  .btn {
+    max-width: 80%;
+    margin-left: 0.7rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .cart-container {
+    max-width: 18rem;
+  }
 }
